@@ -1,0 +1,150 @@
+# Tradfri color_temp range is 250 to 454 (higher is warmer)
+
+# ....................................................
+# Time-based
+# ....................................................
+
+- name: Morning Lights
+  entities:
+    group.hue_lights:
+      state: on
+      brightness: 255
+      color_temp: 153
+    group.tradfri_lights:
+      state: on
+      brightness: 255
+      color_temp: 250
+- name: Afternoon Lights
+  entities:
+    group.hue_lights:
+      state: on
+      brightness: 254
+      color_temp: 300
+    group.tradfri_lights:
+      state: on
+      brightness: 220
+      color_temp: 280
+- name: Evening Lights
+  entities:
+    group.hue_lights:
+      state: on
+      brightness: 81
+      color_temp: 443
+    group.tradfri_lights:
+      state: on
+      brightness: 10
+      color_temp: 450
+- name: Bedtime Lights
+  entities:
+    group.hue_lights:
+      state: on
+      brightness: 20
+      rgb_color: [255,50,0]
+    group.tradfri_lights:
+      state: off
+
+# ....................................................
+# Activity-based
+# ....................................................
+
+- name: All Off
+  entities:
+    group.all_lights:
+      state: off
+- name: Cooking
+  entities:
+    light.kitchen_color:
+      state: on
+      brightness: 254
+      color_temp: 330
+    light.bedroomcolor:
+      state: on
+      brightness: 81
+      color_temp: 443
+    light.bathroom_color:
+      state: on
+      brightness: 81
+      color_temp: 443
+    group.living:
+      state: on
+      brightness: 81
+      color_temp: 443
+    group.tradfri_lights:
+      state: on
+      brightness: 119
+      color_temp: 450
+- name: Pause Movie
+  entities:
+    group.entry:
+      state: off
+    group.bedroom:
+      state: off
+    group.tower:
+      state: on
+      brightness: 50
+      color_temp: 454
+    group.living:
+      state: on
+      brightness: 81
+      color_temp: 443
+    group.kitchen:
+      state: on
+      brightness: 101
+      color_temp: 454
+    group.bathroom:
+      state: on
+      brightness: 10
+      color_temp: 450
+- name: Dinner and a Movie
+  entities:
+    group.living:
+      state: off
+    group.entry:
+      state: off
+    group.bedroom:
+      state: off
+    group.tower:
+      state: on
+      brightness: 121
+      color_temp: 454
+    light.kitchen_color:
+      state: on
+      brightness: 10
+      color_temp: 450
+    light.kitchen_white:
+      state: off
+    light.bathroom_color:
+      state: on
+      brightness: 10
+      color_temp: 450
+    light.bathroom_white:
+      state: off
+- name: Movie Time
+  entities:
+    group.living:
+      state: off
+    group.entry:
+      state: off
+    group.bedroom:
+      state: off
+    light.tower_top:
+      state: on
+      brightness: 121
+      color_temp: 454
+    light.tower_mid:
+      state: off
+    light.tower_bottom:
+      state: off
+    light.kitchen_color:
+      state: on
+      brightness: 10
+      color_temp: 450
+    light.kitchen_white:
+      state: off
+    light.bathroom_color:
+      state: on
+      brightness: 10
+      color_temp: 450
+    light.bathroom_white:
+      state: off
+

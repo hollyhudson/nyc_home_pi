@@ -1,0 +1,54 @@
+# Describes how the HA dashboard should look
+
+# Dashboard Cards
+group.lights_card:
+  friendly_name: Lights
+group.scenes_card:
+  friendly_name: Scenes
+media_player.spotify:
+  friendly_name: Spotify
+
+# Lights Card
+group.entry:
+  icon: mdi:door
+  friendly_name: Entry
+group.living:
+  icon: mdi:sofa
+  friendly_name: Living Room
+group.tower:
+  icon: mdi:castle
+  friendly_name: Tower
+group.kitchen:
+  icon: mdi:food-apple
+  friendly_name: Kitchen
+group.bathroom:
+  icon: mdi:water
+  friendly_name: Bathroom
+group.bedroom:
+  icon: mdi:hotel
+  friendly_name: Bedroom
+
+# Scenes Card
+scene.morning_lights:
+  icon: mdi:weather-sunset-up
+scene.afternoon_lights:
+  icon: mdi:weather-sunny
+scene.evening_lights:
+  icon: mdi:weather-sunset-down
+scene.bedtime_lights:
+  icon: mdi:weather-night
+scene.cooking:
+  icon: mdi:pot
+scene.all_off:
+  icon: mdi:lightbulb
+scene.pause_movie:
+  icon: mdi:pause
+scene.dinner_and_a_movie:
+  icon: mdi:popcorn
+scene.movie_time:
+  icon: mdi:filmstrip
+
+# Themes Card
+
+# Custom Components
+

@@ -1,0 +1,97 @@
+# ............................................................... 
+# Rooms 
+# ............................................................... 
+
+bedroom:
+  entities:
+    - light.bedroomcolor
+    - light.bedroom_closet
+    - light.bedroom_west
+bathroom:
+  entities:
+    - light.bathroom_color
+    - light.bathroom_white
+kitchen:
+  entities:
+    - light.kitchen_color
+    - light.kitchen_west
+    - light.kitchen_east
+entry:
+  entities:
+    - light.entry_west
+    - light.entry_east
+living:
+  entities:
+    - light.track_west
+    - light.track_mid_west
+    - light.track_mid_east
+    - light.track_east
+tower:
+  entities:
+    - light.tower_bottom
+    - light.tower_mid
+    - light.tower_top
+
+# ............................................................... 
+# By type of hardware
+# ............................................................... 
+
+tradfri_lights:
+  entities:
+    - light.bedroom_closet
+    - light.bedroom_west
+    - light.bathroom_white
+    - light.kitchen_west
+    - light.kitchen_east
+    - group.entry
+    - group.tower
+hue_lights:
+  entities:
+    - light.bedroomcolor
+    - light.bathroom_color
+    - light.kitchen_color
+    - group.living
+
+# ............................................................... 
+# Cards for the frontend UI 
+# ............................................................... 
+
+# ........ Main Tab ............
+
+default_view:
+  name: Main
+  view: yes
+  entities:
+    - group.lights_card
+    - group.scenes_card
+    - media_player.spotify
+    - sensor.adelaide_battery_level
+    - sensor.trmm_battery_level
+    - sensor.opal_battery_level
+    - sensor.gypsum_battery_level
+
+# Cards on the Main Tab
+
+lights_card:
+  name: Lights
+  entities:
+    - group.bedroom
+    - group.bathroom
+    - group.kitchen
+    - group.entry
+    - group.living
+    - group.tower
+scenes_card:
+  name: Scenes
+  entities:
+    - scene.morning_lights
+    - scene.afternoon_lights
+    - scene.evening_lights
+    - scene.bedtime_lights
+    - scene.all_off
+    - scene.cooking
+    - scene.pause_movie
+    - scene.dinner_and_a_movie
+    - scene.movie_time
+
+# ..... Automations Tab ........
